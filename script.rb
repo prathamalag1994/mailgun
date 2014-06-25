@@ -6,10 +6,13 @@
      require 'mailgun'
       class Launcher
       	mg = Mailgun::Client.new "key-9pst8e-c0sj-8lmh6yylz-ntjk9bi1e1"
+        result = mg.get "lists/#{'mm@sandbox57565cbadb9f41649a32767a8b50141a.mailgun.org'}"
+        result = mg.delete "lists/#{'mm@sandbox57565cbadb9f41649a32767a8b50141a.mailgun.org'}/members/#{'yoyopratham1994@gmail.com'}"
       	parameters = {:from    => 'prathamalag@berkeley.edu',
                   :to      => 'mm@sandbox57565cbadb9f41649a32767a8b50141a.mailgun.org',
                   :subject => 'The Ruby SDK is awesome!',
-                  :text    => 'It is really easy to send a message!'}
+                  :text    => 'It is really easy to send a message!',
+                  :campaign => 'msm'}
                   mg.send_message "sandbox57565cbadb9f41649a32767a8b50141a.mailgun.org", parameters
 
       	#gb = Gibbon::API.new("2a6262f26c44f974bbc48801f00ca358-us8")
