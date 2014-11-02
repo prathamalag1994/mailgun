@@ -11,6 +11,8 @@
                   "o:campaign" => "msm"}
                   mg.send_message "sandbox57565cbadb9f41649a32767a8b50141a.mailgun.org", parameters
 
+        #the above sends to a mailing list: adding to the same is pretty easy too
+
         #uncomment to use this instead
         #result = mg.get "lists/#{'mm@sandbox57565cbadb9f41649a32767a8b50141a.mailgun.org'}"
         #result = mg.post "lists/#{'mm@sandbox57565cbadb9f41649a32767a8b50141a.mailgun.org'}/members/#{'yoyopratham1994@gmail.com'}", {:address => 'yoyopratham1994@gmail.com',
